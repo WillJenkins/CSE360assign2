@@ -9,7 +9,13 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		
+		Calculator calc = new Calculator();
+		calc.add(4);
+		calc.multiply(2);
+		System.out.println(calc.getTotal() + "\n");
+		calc.divide(2);
+		System.out.println(calc.getTotal() + "\n");
+		System.out.println(calc.getHistory());
 		
 	}
 
