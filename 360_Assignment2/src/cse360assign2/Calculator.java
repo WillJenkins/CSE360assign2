@@ -9,9 +9,8 @@
 package cse360assign2;
 
 /**
- * Basic integer calculator. Stores results of arithmetic 
- * in one integer variable. Results are returned via the
- * getTotal method.
+ * Basic integer calculator. All methods operate on one stored integer
+ * variable. Results are returned via the getTotal method.
  *
  */
 
@@ -31,7 +30,7 @@ public class Calculator {
 	 *  @return total  results of arithmetic.
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -39,7 +38,7 @@ public class Calculator {
 	 * @param value  integer to be added to total
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/**
@@ -47,7 +46,7 @@ public class Calculator {
 	 * @param value  integer to subtract from total
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/**
@@ -55,16 +54,19 @@ public class Calculator {
 	 * @param value  integer to multiply by total
 	 */
 	public void multiply (int value) {
-		
+		total = total * value;
 	}
 	
 	/**
 	 * Performs integer division on the total by the input integer.
-	 * Entering zero will result in zero
+	 * Entering zero will result in the total being zero
 	 * @param value  integer to divide total by.
 	 */
 	public void divide (int value) {
-		
+		if(value == 0)
+			total = 0;
+		else
+			total = total / value;
 	}
 	
 	/**
